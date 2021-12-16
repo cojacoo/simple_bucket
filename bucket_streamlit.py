@@ -100,7 +100,7 @@ if MO=='Linear':
 
     image = Image.open('linstore.png')
     st.sidebar.image(image,use_column_width=True)
-    
+
     st.sidebar.markdown('Mittlere Verweilzeit des Wassers im Speicher:')
     tres = st.sidebar.slider('Residence time (days)', 30, 300, 100)
     st.sidebar.markdown('Verdunstung (als Senkenterm):')
@@ -257,3 +257,5 @@ elif MO=='Beta Store':
     )
     
     st.plotly_chart(fig)
+
+st.sidebar.markdown('Der Code für die Modelle ist im GitHub: https://github.com/cojacoo/simple_bucket')
