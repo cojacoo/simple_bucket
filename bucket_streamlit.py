@@ -176,7 +176,7 @@ elif MO=='Beta Store':
 
     st.sidebar.markdown('Mittlere Verweilzeit des Wassers im Gewässerspeicher:')
     tres = st.sidebar.slider('Residence time (days)', 30, 300, 100)
-    st.sidebar.markdown('$$\beta$$-Parameter im Bodenspeicher:')
+    st.sidebar.markdown('beta-Parameter im Bodenspeicher:')
     beta = st.sidebar.slider('beta exponent', 0.3, 3., 1.25)
     st.sidebar.markdown('Größe des Bodenspeichers als Porosität einer 1m Bodensäule:')
     poro = st.sidebar.slider('porosity', 0.2, 0.5, 0.3)
