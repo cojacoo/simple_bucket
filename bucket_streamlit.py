@@ -42,7 +42,7 @@ else:
     colp1, P, Q = oneevent(colp)
 
 #Plot selected event
-st.subheader('Some Rainfall Runoff Data')
+st.subheader('Niederschlag und Abfluss Daten')
 fig = go.Figure()
 fig = make_subplots(specs=[[{"secondary_y": True}]])
 fig.add_trace(go.Scatter(x=colp1.index,y=colp1.precip, mode='lines', hovertext=colp1.precip, name='Precipitation'),secondary_y=False)
@@ -95,7 +95,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 
 st.sidebar.title('Settings')
-MO = st.sidebar.selectbox('Select Model',['Linear','Beta Store'])
+MO = st.sidebar.selectbox('Model auswählen',['Linear','Beta Store'])
 if MO=='Linear':
 
     image = Image.open('linstore.png')
@@ -176,7 +176,7 @@ elif MO=='Beta Store':
 
     st.sidebar.markdown('Mittlere Verweilzeit des Wassers im Gewässerspeicher:')
     tres = st.sidebar.slider('Residence time (days)', 30, 300, 100)
-    st.sidebar.markdown('$\beta$-Parameter im Bodenspeicher:')
+    st.sidebar.markdown('$$\beta$$-Parameter im Bodenspeicher:')
     beta = st.sidebar.slider('beta exponent', 0.3, 3., 1.25)
     st.sidebar.markdown('Größe des Bodenspeichers als Porosität einer 1m Bodensäule:')
     poro = st.sidebar.slider('porosity', 0.2, 0.5, 0.3)
